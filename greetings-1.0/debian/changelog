@@ -1,0 +1,5 @@
+greetings (1.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Person McTester <person@company.tld>  Thu, 15 Dec 2016 09:48:19 -0800
