@@ -1,0 +1,100 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: export CFLAGS from dpkg-buildflags (origin: vendor): -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security
+dpkg-buildpackage: export CPPFLAGS from dpkg-buildflags (origin: vendor): -D_FORTIFY_SOURCE=2
+dpkg-buildpackage: export CXXFLAGS from dpkg-buildflags (origin: vendor): -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security
+dpkg-buildpackage: export FFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export LDFLAGS from dpkg-buildflags (origin: vendor): -Wl,-Bsymbolic-functions -Wl,-z,relro
+dpkg-buildpackage: source package greetings
+dpkg-buildpackage: source version 1.0-1
+dpkg-buildpackage: source changed by Person McTester <person@company.tld>
+ dpkg-source --before-build greetings-1.0
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean 
+   dh_testdir
+   dh_auto_clean
+   dh_clean
+ dpkg-source -b greetings-1.0
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building greetings using existing ./greetings_1.0.orig.tar.gz
+dpkg-source: info: building greetings in greetings_1.0-1.debian.tar.gz
+dpkg-source: info: building greetings in greetings_1.0-1.dsc
+ debian/rules build
+dh build 
+   dh_testdir
+   dh_auto_configure
+   dh_auto_build
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary 
+   dh_testroot
+   dh_prep
+   dh_installdirs
+   dh_auto_install
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installexamples
+   dh_installman
+   dh_installcatalogs
+   dh_installcron
+   dh_installdebconf
+   dh_installemacsen
+   dh_installifupdown
+   dh_installinfo
+   dh_pysupport
+dh_pysupport: This program is deprecated, you should use dh_python2 instead. Migration guide: http://deb.li/dhs2p
+   dh_installinit
+   dh_installmenu
+   dh_installmime
+   dh_installmodules
+   dh_installlogcheck
+   dh_installlogrotate
+   dh_installpam
+   dh_installppp
+   dh_installudev
+   dh_installwm
+   dh_installxfonts
+   dh_installgsettings
+   dh_bugfiles
+   dh_ucf
+   dh_lintian
+   dh_gconf
+   dh_icons
+   dh_perl
+   dh_usrlocal
+   dh_link
+   dh_compress
+   dh_fixperms
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package `greetings' in `../greetings_1.0-1_all.deb'.
+ dpkg-genchanges  >../greetings_1.0-1_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build greetings-1.0
+dpkg-buildpackage: full upload (original source is included)
+Now running lintian...
+W: greetings source: superfluous-clutter-in-homepage <insert the upstream URL, if relevant>
+W: greetings source: bad-homepage <insert the upstream URL, if relevant>
+W: greetings source: out-of-date-standards-version 3.9.2 (current is 3.9.3)
+W: greetings: new-package-should-close-itp-bug
+W: greetings: wrong-bug-number-in-closes l3:#nnnn
+E: greetings: helper-templates-in-copyright
+W: greetings: copyright-has-url-from-dh_make-boilerplate
+E: greetings: copyright-contains-dh_make-todo-boilerplate
+E: greetings: description-is-dh_make-template
+E: greetings: section-is-dh_make-template
+W: greetings: superfluous-clutter-in-homepage <insert the upstream URL, if relevant>
+W: greetings: bad-homepage <insert the upstream URL, if relevant>
+W: greetings: script-with-language-extension usr/bin/hi.sh
+W: greetings: script-with-language-extension usr/bin/hola.sh
+W: greetings: script-with-language-extension usr/bin/salut.sh
+W: greetings: binary-without-manpage usr/bin/hi.sh
+W: greetings: binary-without-manpage usr/bin/hola.sh
+W: greetings: binary-without-manpage usr/bin/salut.sh
+W: greetings: executable-not-elf-or-script usr/bin/salut.sh
+W: greetings: executable-not-elf-or-script usr/bin/hola.sh
+W: greetings: executable-not-elf-or-script usr/bin/hi.sh
+Finished running lintian.

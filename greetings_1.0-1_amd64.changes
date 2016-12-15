@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Thu, 15 Dec 2016 09:48:19 -0800
+Source: greetings
+Binary: greetings
+Architecture: source all
+Version: 1.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: Person McTester <person@company.tld>
+Changed-By: Person McTester <person@company.tld>
+Description: 
+ greetings  - <insert up to 60 chars description>
+Changes: 
+ greetings (1.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1: 
+ a75e91ab7558b858c09b782557591c6a286062ca 815 greetings_1.0-1.dsc
+ 30d3b04f76e8e55a54d8f644b467326bf56d9638 215 greetings_1.0.orig.tar.gz
+ f7e849a16819ff0a220ef77ffbbd54db316bb71b 1805 greetings_1.0-1.debian.tar.gz
+ a433fc5edfebd309d577bbe4ef005070bd6983c6 2156 greetings_1.0-1_all.deb
+Checksums-Sha256: 
+ ba3b02d0d2b56b679aa0a3f784f497e5196d5dd164ae90ffdc53c09dbcfe1d29 815 greetings_1.0-1.dsc
+ 207e0b454ab5c0c5bec7a8cd21d8ddf64bb1eb15e501d3a42b34d2191e0c54f3 215 greetings_1.0.orig.tar.gz
+ af6bdf7bc90b3efebb0c6194fdd3c3c0614a46dba08b41562b00aa7b0a2374c1 1805 greetings_1.0-1.debian.tar.gz
+ 0faeb73a4c779e2e453a9cefe84ee83ca64dba70d03c281485359fb73f76b039 2156 greetings_1.0-1_all.deb
+Files: 
+ 47209705fcc8004acb8de2c1299de6f8 815 unknown extra greetings_1.0-1.dsc
+ f2479b734f3993fc001213a0b21ad8d6 215 unknown extra greetings_1.0.orig.tar.gz
+ 89e9ac81e34f5f4f58497889ba5c4643 1805 unknown extra greetings_1.0-1.debian.tar.gz
+ 93d07a351c4c9b7823d101ae30045b2f 2156 unknown extra greetings_1.0-1_all.deb
